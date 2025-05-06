@@ -10,32 +10,33 @@ The goal is to document a working and repeatable method to get the BPI R2 PRO up
 
 ## 🚀 Flashing OS to BPI R2 PRO
 
----
 
 ### 📥 Downloading Required Resources
 
-1. **Download and install Rockchip USB Driver**  
-   ![Install USB Driver](docs/images/usb_driver_install.png)
+1. **Download and install Rockchip USB Driver** 
+   [Link](https://download.banana-pi.dev/d/ca025d76afd448aabc63/files/?p=%2FTools%2Fimage_download_tools%2FDriverAssitant_v5.11.zip) 
+   ![Install USB Driver](img/usb_driver_install.png)
 
 2. **Download RKDevTool v2.84**  
-   [RKDevTool_Release_v2.84.zip (Google Drive)](https://drive.google.com/file/d/1tDRblKpE9zV-RKDevTool_Release_v2.84)
+   [Link](https://download.banana-pi.dev/d/ca025d76afd448aabc63/files/?p=%2FTools%2Fimage_download_tools%2FUpdate-EMMC-Tools.zip)
 
 3. **Download OS image**  
-   For example: [rock-3a_debian_bullseye_xfce_b25.img](https://github.com/radxa-build/rock-3a/releases/download/20220826/rock-3a_debian_bullseye_xfce_b25.img)
+   [Link](https://github.com/radxa-build/rock-3a/releases/)
+   For example was used rock-3a_debian_bullseye_xfce_b25.img.
 
 4. **Download loader (bootloader)**  
-   - For RK3568 SB variant (no check, TODLY):  
-     [rk356x_spl_loader_ddr1056_v1.12.109_no_check_todly.bin](https://github.com/radxa/rockchip-bsp/raw/master/tools/rk356x_spl_loader_ddr1056_v1.12.109_no_check_todly.bin)
-
-   - (Alternate):  
+   - Defualt:  
      [rk356x_spl_loader_ddr1056_v1.10.111.bin](https://github.com/radxa/rockchip-bsp/raw/master/tools/rk356x_spl_loader_ddr1056_v1.10.111.bin)
+
+   - For RK3568 SB:  
+     [rk356x_spl_loader_ddr1056_v1.12.109_no_check_todly.bin](https://github.com/radxa/rockchip-bsp/raw/master/tools/rk356x_spl_loader_ddr1056_v1.12.109_no_check_todly.bin)
 
 ---
 
 ### 🔌 Preparing BPI R2 PRO for Flashing
 
 1. Open **RKDevTool_Release_v2.84**  
-   ![Open RKDevTool](docs/images/open_rkdevtool.png)
+   ![Open RKDevTool](img/open_rkdevtool.png)
 
 2. Disconnect the power adapter from the board.
 
@@ -47,6 +48,7 @@ The goal is to document a working and repeatable method to get the BPI R2 PRO up
    - Hold the **Maskrom** button for ~2 seconds, then release it
 
 5. Your PC should recognize the device if the Rockchip USB driver was installed correctly.
+![Detected module](img/detect_mudule_maskrom.png)
 
 ---
 
@@ -59,16 +61,16 @@ All steps are done inside **RKDevTool_Release_v2.84**.
 2. In the list, find the row with name **loader**.  
    - Use the last column (path selector) to choose the file  
      `rk356x_spl_loader_ddr1056_v1.12.109_no_check_todly.bin`  
-   ![Select Loader](docs/images/select_loader.png)
+   ![Select Loader](img/select_loader.png)
 
 3. In the next row, rename it to **image** and select the downloaded OS image file  
    `rock-3a_debian_bullseye_xfce_b25.img`  
-   ![Select Image](docs/images/select_image.png)
+   ![Select Image](img/select_image.png)
 
 4. All other rows should be **unchecked or deleted** using right-click menu.
 
 5. Click the **"Run"** button to start flashing  
-   ![Run Flashing](docs/images/run_flashing.png)
+   ![Run Flashing](img/run_flashing.png)
 
 6. Within a few minutes, the module will be flashed. After reboot, a login screen should appear.  
    - Default login for this image:  
