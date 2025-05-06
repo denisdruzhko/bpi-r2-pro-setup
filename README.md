@@ -15,14 +15,14 @@ The goal is to document a working and repeatable method to get the BPI R2 PRO up
 > ✅ **All required files can also be found in the `resources` folder in this repository.**
 
 1. **Download and install Rockchip USB Driver**  
-   [Link](https://download.banana-pi.dev/d/ca025d76afd448aabc63/files/?p=%2FTools%2Fimage_download_tools%2FDriverAssitant_v5.11.zip)  
+   [Download Link](https://download.banana-pi.dev/d/ca025d76afd448aabc63/files/?p=%2FTools%2Fimage_download_tools%2FDriverAssitant_v5.11.zip)  
    ![Install USB Driver](img/usb_driver_install.png)
 
 2. **Download RKDevTool v2.84**  
-   [Link](https://download.banana-pi.dev/d/ca025d76afd448aabc63/files/?p=%2FTools%2Fimage_download_tools%2FUpdate-EMMC-Tools.zip)
+   [Download Link](https://download.banana-pi.dev/d/ca025d76afd448aabc63/files/?p=%2FTools%2Fimage_download_tools%2FUpdate-EMMC-Tools.zip)
 
 3. **Download OS image**  
-   [Link](https://github.com/radxa-build/rock-3a/releases/)  
+   [Download Link](https://github.com/radxa-build/rock-3a/releases/)  
    For example: `rock-3a_debian_bullseye_xfce_b25.img`
 
 4. **Download loader (bootloader)**  
@@ -62,10 +62,12 @@ All steps are done inside **RKDevTool_Release_v2.84**.
 2. In the list, find the row with the name **loader**.  
    - Use the last column (path selector) to choose the file  
      `rk356x_spl_loader_ddr1056_v1.12.109_no_check_todly.bin`  
+
    ![Select Loader](img/select_loader.png)
 
 3. In the next row, rename it to **image** and select the downloaded OS image file  
    `rock-3a_debian_bullseye_xfce_b25.img`  
+
    ![Select Image](img/select_image.png)
 
 4. All other rows should be **unchecked or deleted** using the right-click menu.
@@ -89,7 +91,7 @@ All steps are done inside **RKDevTool_Release_v2.84**.
 
 2. **Official images failed to flash**  
    - Flashing official images resulted in errors (varied per attempt).  
-   - Flashing **custom images from Google Drive** worked ([link](https://drive.google.com/drive/folders/1t4KdXUPkGZ-mtYV1hGTare0nghXwOpwc)), but caused partitioning issues:
+   - Flashing **custom images from Google Drive** worked ([Download Link](https://drive.google.com/drive/folders/1t4KdXUPkGZ-mtYV1hGTare0nghXwOpwc)), but caused partitioning issues:
      - Only 6GB out of 14GB was available.
      - All attempts to resize or repartition failed.
 
@@ -119,3 +121,10 @@ All steps are done inside **RKDevTool_Release_v2.84**.
 - After completion, the screen will display a login prompt:  
   **Login**: `bpi`  
   **Password**: `bananapi`
+
+## 🔗 Useful Links
+
+- [Banana Pi Instruction Page](https://wiki.banana-pi.org/Getting_Started_with_R2PRO)
+- [Install on eMMC from USB port](https://wiki.radxa.com/Rock3/install/usb-install)
+- [Radxa Rockchip Image Releases](https://github.com/radxa-build/rock-3a/releases/)
+- [Google Disk with images for BPI R2 PRO](https://drive.google.com/drive/folders/1gHNGVL_uq8L4t987k-nzg6MKWDSmDcfC)
